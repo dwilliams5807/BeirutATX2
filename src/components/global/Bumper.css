@@ -1,0 +1,10 @@
+
+
+.bumper {
+ 
+    display: block;
+    bottom: 0;
+    height: 125px;
+    width: 100%;
+    background-color: #fafafa;
+}

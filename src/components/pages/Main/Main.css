@@ -1,0 +1,40 @@
+.nav-menu-container {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 100px;
+}
+
+.cart-badge {
+  /* position: fixed;
+  right: 50px;
+  bottom: 115px; */
+}
+
+.menu-icons {
+  color: black;
+  font-family: 'OswaldBold';
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+}
+.quantity-badge {
+  background-color: #b84234;
+  position: absolute;
+}
+
+h3 {
+  
+  color: black;
+}
+
+.logo-link {
+  position: absolute;
+  width: '75px';
+  right: 0;
+  left: 0;
+  top: -5px;
+  margin: auto;
+
+}

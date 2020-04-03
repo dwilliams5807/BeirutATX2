@@ -1,0 +1,42 @@
+.item-card {
+   position: relative;
+    font-family:  'OswaldLight';
+
+}
+
+.menu-div {
+    position: relative;
+    top: 10px;
+  
+}
+
+
+.cat-button {
+    background-color: #b84234;
+}
+.add-button {
+    background-color:  black;
+    font-family:  'CECFont';
+}
+.cat-button-text {
+    color: white;
+    font-family:  'CECFont';
+}
+
+.item-card-title {
+    font-family:  'CECFont';
+}
+.menu-item-cont {
+    text-align: center;
+}
+
+.centered {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .no-image {
+      display: none;
+  }

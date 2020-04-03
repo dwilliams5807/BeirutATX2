@@ -1,0 +1,30 @@
+.top-bar {
+    background-color:#b84234;
+    height: 5px;
+
+
+}
+.brand-image {
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+.brand-cont {
+    height: 35px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    font-family:  'CECFont';
+    font-size: small;
+}
+h4 {
+    font-family:  'CECFont';
+    color: black;
+ }
+
+ .divider {
+    border-top: 1px dashed #b84234 ;
+ }

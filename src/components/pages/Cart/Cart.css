@@ -1,0 +1,22 @@
+.cart-col {
+    margin: 0 auto;
+    
+}
+
+.cart-order-sum {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.menu-return {
+    margin-top: 5px;
+}
+
+ h5 {
+    font-family: 'CECFont';
+}
+
+p {
+    font-family: 'CECFontpb';
+
+}
