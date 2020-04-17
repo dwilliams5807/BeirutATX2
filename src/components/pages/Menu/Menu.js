@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from 'react-redux'
 import './Menu.css';
 import { addToCart, cartVisible } from '../../reducers/actions/cartActions.js'
+import TopItems from '../../global/TopItems.js'
+
 
 
 import  store  from '../../reducers/store/store.js'
@@ -154,6 +156,7 @@ componentDidMount() {
     return ( 
       
    <div className="menu-div">  
+     <TopItems />
 
       <Container className="menu-item-cont"> 
          <Button theme="info" className="cat-button" block onClick={this.toggleEntres}><h5 className='cat-button-text'>Entres</h5></Button>

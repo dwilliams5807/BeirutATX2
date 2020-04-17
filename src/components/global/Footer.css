@@ -10,13 +10,18 @@ h5 {
 }
 
 
+
 .menuly-logo {
-    height: 200px;
-    width: 320px;
+    height: 100px;
+    width: 250px;
 
     display:inline-block
 }
 
 .menuly-container {
-    background-color: #fafafa;
+    border-top: 5px solid #fafafa;
+}
+
+.menuly-text {
+    margin-top: 25px;
 }

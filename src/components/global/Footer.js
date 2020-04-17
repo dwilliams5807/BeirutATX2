@@ -4,7 +4,7 @@ import "./Footer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelopeOpenText, faPhone, faMapMarkerAlt  } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
-import menuly from '../../images/menuly-horizontal.png'
+import menuly from '../../images/ruuby-logo.png'
 
 
 export class Footer extends Component {
@@ -33,9 +33,11 @@ export class Footer extends Component {
 
                     </Col>
                 </Row>
+               
                 <Row>
                     <Col>
                     <div className='menuly-container'>
+                        <h5 className='menuly-text'>Powered By</h5>
                    <img className="menuly-logo" src={menuly}></img>
                     </div>
                     </Col>

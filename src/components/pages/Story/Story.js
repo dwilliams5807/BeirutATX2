@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
-import { Button, Card, CardBody, CardFooter } from "shards-react";
+import { Button, Card, CardBody, CardFooter, CardDeck, CardGroup } from "shards-react";
 import { connect } from 'react-redux';
 import { setLocation } from '../../reducers/actions/cartActions.js'
 import { cartVisible } from '../../reducers/actions/cartActions.js'
 import { Form } from 'react-bootstrap';
+import Footer from '../../global/Footer.js'
+
+import './Story.css';
+
+import truck from "../../../images/truckedit.png";
+
+
 
   import {
 
@@ -15,6 +22,7 @@ import { Form } from 'react-bootstrap';
 
 import {
     Link
+
   } from "react-router-dom";
 
 
@@ -39,22 +47,36 @@ export class Landing extends Component {
         return (
 
         <Container className="center">
-            <Card >
-                <CardBody className="masthead">
-                    <Row>
-                        <Col>
+            <Row>
+                <Col>
+                  <h1>Our Story</h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+             <div className='container-div'>
+                  <img src={truck} className='story-img' />
+              </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+             <div className='container-div'>
+                    
+                  <Card className='about-card'>
+                      <CardBody>
+                          <p>Beirut ATX is a family owned and operated food trailer located at the Domain shopping center in Austin, Texas; Serving up traditional lebanese eats in a family friendly setting.</p>
+                      </CardBody>
+                  </Card>
+              </div>
 
-                        </Col>
-                    </Row>
-                </CardBody>
-                <CardFooter>
-                <Link to='/menu'>
-                    <Button style={{ fontFamily: 'CECFont'}}>Start Order</Button>
-                </Link>
-                </CardFooter>
-            </Card>
+                </Col>
+            </Row>
+            <Footer />
+
    
          </Container>
+
         )
     }
 }

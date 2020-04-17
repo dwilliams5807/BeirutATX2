@@ -40,3 +40,7 @@
   .no-image {
       display: none;
   }
+
+  .item-slider {
+    margin-bottom: 50px;
+}

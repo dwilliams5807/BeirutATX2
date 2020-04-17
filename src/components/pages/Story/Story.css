@@ -1,0 +1,20 @@
+.story-img {
+
+ width: 100%;
+ max-width: 640px;
+ margin: auto;
+
+
+}
+.container-div{ 
+    Display: flex;
+    Height: 100%;
+    Width: 100%; 
+    Align-Items: center;
+    Justify-Content: center;
+    }
+
+.about-card {
+ max-width: 640px;
+
+}
