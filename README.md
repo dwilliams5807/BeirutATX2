@@ -1,3 +1,1 @@
-React and Redux Pizza Ordering App
-
-https://chuckecarryout.herokuapp.com
+Beirut Food Truck Web App Version 2
