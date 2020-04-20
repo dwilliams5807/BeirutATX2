@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { Container, Card, CardBody, CardTitle, Button, Col, Row, CardHeader, CardImg } from 'shards-react'
+import { Container, Card, CardBody, CardDeck, CardTitle, Button, Col, Row, CardHeader, CardImg } from 'shards-react'
 import { connect } from 'react-redux'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { addToCart} from '../reducers/actions/cartActions.js'
+import "./TopItems.css";
+
 
 const responsive = {
     desktop: {
@@ -23,21 +25,26 @@ const responsive = {
     },};
 
 export class TopItems extends Component {
+
+  handleClick = (id)=>{
+    this.props.addToCart(id); 
+}
     
     render() {
         let topList = this.props.top.map(item=>{
             return (
             <div>
-                <Container className='centered'>
+                <CardDeck className='centered'>
                
                 <Card style={{ maxWidth: "300px" }}>
                 <CardImg style={{ height: '40%', width:'100%' }} src={item.img} />
                 <CardBody>
                     <CardTitle className="item-title">{item.title}</CardTitle>
-                    <Button className='landing-button'>Order</Button>
+                    <p>${item.price}</p>
+                    <Button block outline theme="light" onClick={()=>{this.handleClick(item.id)}} className='landing-button'>Order</Button>
                 </CardBody>
                 </Card>
-                </Container>
+                </CardDeck>
                  </div>
             )
           })
@@ -45,7 +52,7 @@ export class TopItems extends Component {
             <Container className='item-slider'>
                 <Row>
                 <Col>
-                <h3>Top Picks</h3>
+                <h4>Top Picks</h4>
                 <Carousel
                     swipeable={true}
                     draggable={true}

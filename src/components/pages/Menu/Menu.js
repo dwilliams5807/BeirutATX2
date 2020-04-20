@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import './Menu.css';
 import { addToCart, cartVisible } from '../../reducers/actions/cartActions.js'
 import TopItems from '../../global/TopItems.js'
+import Footer from '../../global/Footer.js'
 
 
 
@@ -22,7 +23,9 @@ import {
   Collapse,
   Modal,
   ModalBody,
-  ModalHeader
+  ModalHeader,
+  Popover,
+  PopoverBody
 } from "shards-react";
 import toggleCartOn from '../Main/Main.js'
 import Main from "../Main/Main";
@@ -42,11 +45,11 @@ class Menu extends Component {
 
    
 
-    this.state = {  collapseEntres: false, collapseSides: false, collapseBeverages: false };
+    this.state = {  collapseEntres: false, collapseSides: false, collapseBeverages: false, show: null };
   }
 
 
-  toggleEntres() {
+  toggleEntres(id) {
     this.setState({ collapseEntres: !this.state.collapseEntres });
   }
   toggleSides() {
@@ -63,9 +66,10 @@ class Menu extends Component {
     this.props.cartVisible(true); 
 }
 
+
 componentDidMount() {
   this.props.cartVisible(true); 
-  
+
 }
 
 
@@ -83,12 +87,14 @@ componentDidMount() {
                <img style={{ height: "75px", marginBottom: "10px", }} src={item.img} />
                 </Col>
                 <Col >
-                <CardTitle className="item-card-title" >{item.title}</CardTitle><p>${item.price}</p>
+                <CardTitle className="item-card-title" >{item.title}</CardTitle>
+                <p>${item.price}</p>
+                
                 </Col>
                 </Row>
                 <Row>
                   <Col sm='12'>
-                    <span style={{  }} to="/" onClick={()=>{this.handleClick(item.id)}}><Button block className='add-button' pill theme="info">ADD TO CART</Button></span>
+                    <span style={{  }} to="/" onClick={()=>{this.handleClick(item.id)}}><Button pill block className='add-button' pill outline theme="light">Order</Button></span>
                 </Col>
                 </Row>
                 </CardBody>
@@ -115,7 +121,7 @@ componentDidMount() {
                 </Row>
                 <Row>
                   <Col sm='12'>
-                    <span style={{  }} to="/" onClick={()=>{this.handleClick(item.id)}}><Button block className='add-button' pill theme="info">ADD TO CART</Button></span>
+                    <span style={{  }} to="/" onClick={()=>{this.handleClick(item.id)}}><Button block className='add-button' pill outline theme="light">Order</Button></span>
                 </Col>
                 </Row>
                 </CardBody>
@@ -142,7 +148,7 @@ componentDidMount() {
                 </Row>
                 <Row>
                   <Col sm='12'>
-                    <span style={{  }} to="/" onClick={()=>{this.handleClick(item.id)}}><Button block className='add-button' pill theme="info">ADD TO CART</Button></span>
+                    <span style={{  }} to="/" onClick={()=>{this.handleClick(item.id)}}><Button block className='add-button' pill outline theme="light">Order</Button></span>
                 </Col>
                 </Row>
                 </CardBody>
@@ -155,11 +161,16 @@ componentDidMount() {
 
     return ( 
       
-   <div className="menu-div">  
+   <Container className="center menu-div">  
+     <Row>
+       <Col>
+          <h1>Pickup Menu</h1>
+       </Col>
+     </Row>
      <TopItems />
 
       <Container className="menu-item-cont"> 
-         <Button theme="info" className="cat-button" block onClick={this.toggleEntres}><h5 className='cat-button-text'>Entres</h5></Button>
+         <Button outline theme="light" className="cat-button" block onClick={this.toggleEntres}>Entres</Button>
           <Collapse open={this.state.collapseEntres}>
              <Row> 
             {entreList}
@@ -168,7 +179,7 @@ componentDidMount() {
       </Container> 
       <br></br>
       <Container className="menu-item-cont"> 
-         <Button theme="info" className="cat-button" block onClick={this.toggleSides}><h5 className='cat-button-text'>Sides</h5></Button>
+         <Button outline theme="light" className="cat-button" block onClick={this.toggleSides}>Sides</Button>
           <Collapse open={this.state.collapseSides}>
              <Row> 
             {sideList}
@@ -177,7 +188,7 @@ componentDidMount() {
       </Container> 
       <br></br>
       <Container className="menu-item-cont"> 
-         <Button theme="info" className="cat-button" block onClick={this.toggleBeverages}><h5 className='cat-button-text'>Beverages</h5></Button>
+         <Button outline theme="light" className="cat-button" block onClick={this.toggleBeverages}>Beverages</Button>
           <Collapse open={this.state.collapseBeverages}>
              <Row> 
             {beverageList}
@@ -186,8 +197,8 @@ componentDidMount() {
       </Container> 
 
     
-       
-   </div>
+   <Footer />
+   </Container>
        );
   }
 
@@ -199,6 +210,7 @@ const mapStateToProps = (state)=>{
     entres: state.entres,
     sides: state.sides,
     beverages: state.beverages,
+    descriptions: state.items.desc,
    
   }
 }

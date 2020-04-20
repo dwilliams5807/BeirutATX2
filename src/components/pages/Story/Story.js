@@ -8,7 +8,7 @@ import Footer from '../../global/Footer.js'
 
 import './Story.css';
 
-import truck from "../../../images/truckedit.png";
+import truck from "../../../images/about-beirut-atx-truck.png";
 
 
 

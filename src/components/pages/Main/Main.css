@@ -6,28 +6,17 @@
   max-height: 100px;
 }
 
-.cart-badge {
-  /* position: fixed;
-  right: 50px;
-  bottom: 115px; */
-}
-
 .menu-icons {
   color: black;
-  font-family: 'OswaldBold';
   white-space: nowrap;
   position: relative;
   top: 5px;
 }
 .quantity-badge {
-  background-color: #b84234;
+  background-color: #ff5757;
   position: absolute;
 }
 
-h3 {
-  
-  color: black;
-}
 
 .logo-link {
   position: absolute;
@@ -38,3 +27,9 @@ h3 {
   margin: auto;
 
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: 'Quicksand';
+
+ }

@@ -14,22 +14,22 @@ export class Footer extends Component {
                 <Container>
                 <Row>
                     <Col >
-                    <h5 >Connect with us</h5>
-                    <h5><FontAwesomeIcon size='4x' icon={faFacebookSquare} /></h5>
-                    <h5><FontAwesomeIcon size='4x' icon={faInstagramSquare} /></h5>
+                    <h5 className='footer-text'>Connect with us</h5>
+                    <h5 className='footer-text'><FontAwesomeIcon size='4x' icon={faFacebookSquare} /></h5>
+                    <h5 className='footer-text'><FontAwesomeIcon size='4x' icon={faInstagramSquare} /></h5>
 
 
                   
 
                     </Col>
                     <Col >
-                    <h5 size='2x'><FontAwesomeIcon icon={faMapMarkerAlt} /></h5>
-                    <h5>11228 Domain Dr</h5>
-                    <h5>Austin, TX 78758</h5>
-                    <h5 size='2x'><FontAwesomeIcon icon={faPhone} /></h5>
-                    <h5>512-758-3377</h5>
-                    <h5 size='2x'><FontAwesomeIcon icon={faEnvelopeOpenText} /></h5>
-                    <h5>beirut.atx@gmail.com</h5>
+                    <h5 className='footer-text' size='2x'><FontAwesomeIcon icon={faMapMarkerAlt} /></h5>
+                    <h5 className='footer-text'>11228 Domain Dr</h5>
+                    <h5 className='footer-text'>Austin, TX 78758</h5>
+                    <h5 className='footer-text'size='2x'><FontAwesomeIcon icon={faPhone} /></h5>
+                    <h5 className='footer-text'>512-758-3377</h5>
+                    <h5 className='footer-text' size='2x'><FontAwesomeIcon icon={faEnvelopeOpenText} /></h5>
+                    <h5 className='footer-text'>beirut.atx@gmail.com</h5>
 
                     </Col>
                 </Row>

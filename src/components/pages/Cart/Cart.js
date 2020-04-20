@@ -83,12 +83,12 @@ class Cart extends Component{
            <Container className='menu-return'>
            <Link to='/menu'>
            <FontAwesomeIcon size="1x" icon={faUndo}/>
-           <h5>Return to Menu </h5>
+           <p className='cart-text'>Return to Menu </p>
            </Link>
             <Container className="cart-order-sum">
                 <Card>
                     <CardHeader>
-                       <h5>Your Order:</h5>
+                       <h5 className="cart-text">Your Order:</h5>
                 </CardHeader>
                    <CardBody>
                     <ListGroup flush>
@@ -101,7 +101,7 @@ class Cart extends Component{
                  </CardBody>
                  <CardFooter>
                   <p>Subtotal: ${this.props.subtotal} Tax: ${this.props.tax}</p>
-                  <h5>Total: ${this.props.total}</h5>
+                  <h5 className="cart-text">Total: ${this.props.total}</h5>
                     <Link to="/checkout">
                         <Button block>
                             <h5>Checkout</h5>

@@ -1,0 +1,43 @@
+.main-img {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.container-div{ 
+    Display: flex;
+    Height: 100%;
+    Width: 100%; 
+    Align-Items: center;
+    Justify-Content: center;
+    }
+
+.mast-card {
+max-width: 640px;
+width: 100%;
+
+}
+
+.masthead-container {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.mast-text {
+    color:  #2e2a2b;
+}
+.mast-btn {
+    color:  #fafafa;
+    border: none;  
+}
+.mast-btn-1 {
+    background-color: #ff5757;
+}
+.mast-btn-2 {
+    background-color:#2e2a2b;
+    border: none; 
+}
+.mast-btn:hover, .mast-btn:focus, .mast-btn:active, .mast-btn.active, .mast-btn:active:focus {
+    background-color:  #fafafa;
+    color: #2e2a2b;
+    border: none;
+}

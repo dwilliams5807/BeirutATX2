@@ -3,13 +3,8 @@
     min-height: 500px;
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
-
-h5 {
-   color: #fafafa;
-}
-
-
 
 .menuly-logo {
     height: 100px;
@@ -20,8 +15,13 @@ h5 {
 
 .menuly-container {
     border-top: 5px solid #fafafa;
+    margin-top: 50px;
 }
 
 .menuly-text {
     margin-top: 25px;
+}
+.footer-text {
+    color: #fafafa;
+
 }

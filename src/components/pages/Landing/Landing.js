@@ -7,8 +7,6 @@ import Masthead from '../../global/Masthead.js'
 import TopItems from '../../global/TopItems.js'
 import Footer from '../../global/Footer.js'
 
-
-import './Landing.css';
 import { Form } from 'react-bootstrap';
 
   import {

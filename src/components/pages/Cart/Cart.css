@@ -11,12 +11,7 @@
 .menu-return {
     margin-top: 5px;
 }
-
- h5 {
-    font-family: 'CECFont';
+.cart-text {
+  color:  #2e2a2b;
 }
 
-p {
-    font-family: 'CECFontpb';
-
-}

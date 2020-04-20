@@ -1,0 +1,19 @@
+.center {
+    text-align: center;
+}
+
+.item-title {
+
+    color: #2e2a2b;
+    white-space: nowrap;
+    
+}
+.landing-button {
+    background-color: #2e2a2b;
+    color: #fafafa;
+}
+
+.item-slider {
+    margin-bottom: 50px;
+}
+

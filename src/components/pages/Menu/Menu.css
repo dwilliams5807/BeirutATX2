@@ -1,33 +1,31 @@
 .item-card {
    position: relative;
-    font-family:  'OswaldLight';
 
 }
 
 .menu-div {
-    position: relative;
-    top: 10px;
-  
+ margin-top: 15px;
 }
-
+ 
 
 .cat-button {
-    background-color: #b84234;
+    background-color: #ff5757;
+    color: #fafafa;
+    font-size: large;
+    
 }
 .add-button {
-    background-color:  black;
-    font-family:  'CECFont';
-}
-.cat-button-text {
-    color: white;
-    font-family:  'CECFont';
+    background-color:  #2e2a2b;
+    color: #fafafa;
 }
 
+
 .item-card-title {
-    font-family:  'CECFont';
+    color: #2e2a2b;
 }
 .menu-item-cont {
     text-align: center;
+
 }
 
 .centered {

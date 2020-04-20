@@ -2,6 +2,11 @@ import beefShawarma from '../../images/beef-shawarma.jpeg'
 import chickenShawarma from '../../images/chicken-sha.jpeg'
 import mixedGrill from '../../images/mixed-grill.jpeg'
 import veggiePlate from '../../images/veggie-plate.jpeg'
+import falafel from '../../images/falafel.jpeg'
+import fries from '../../images/fries.JPG'
+import rose from '../../images/rose.JPG'
+
+
 
 
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,SET_LOCATION,CART_VISIBLE } from './actions/cartActions.js'
@@ -17,9 +22,9 @@ const initState = {
         {id:104,title:'Shish-Tawook', desc:'Marinated chicken, french fries, tomato, pickles, and garlic aioli.', price:8, style: 'no-image', type: 'entre'},
         {id:105,title:'Mixed Grill Plate', desc: "A generous portion of marinated steak kebab, chicken, kofta with grilled onion, and tomato. Served over pita.", price:17, img: mixedGrill, type: 'entre'},
         {id:106,title:'Kafta', desc: "Grilled seasoned ground beef, grilled onions, parsley, tomato, and hummus.",price:8, style: 'no-image', type: 'entre'},
-        {id:107,title:'Shawarma Fries', desc: "Crispy fries topped shwarma with tomato, pickle, onion, parsley, and tahini sauce.", price:9, style: 'no-image', type: 'entre'},
+        {id:107,title:'Shawarma Fries', desc: "Crispy fries topped shwarma with tomato, pickle, onion, parsley, and tahini sauce.", price:9, img: fries, type: 'entre'},
         {id:108,title:'Veggie Plate', desc: "Falafel, tabbouleh, hummus, baba ghanouj, and pita.", price:9,img:veggiePlate, type: 'entre'},
-        {id:109,title:'Falafel Pita Wrap', desc: "Fresh parsley, mint, tomato, pickle, and tahini sauce.", price:6, style: 'no-image', type: 'entre'},
+        {id:109,title:'Falafel Pita Wrap', desc: "Fresh parsley, mint, tomato, pickle, and tahini sauce.", price:6, img: falafel, type: 'entre'},
 
         {id:201,title:'Tabbouleh Salad', desc: "Parsley, mint, tomato, onion, crushed wheat, lemon juice, and olive oil.", price:4, style: 'no-image', type: 'side'},
         {id:202,title:'Fattoush Salad', desc: "Leafy greens, tomato, cucumber, onion, radish, parsley, mint, fried pita chips, lemon juice, olive oil, and Western sumac.", price:6, style: 'no-image', type: 'side'},
@@ -27,7 +32,7 @@ const initState = {
         {id:204,title:'Hummus Dip and Pita', desc: "Chickpeas, tahini, garlic, lemon juice, olive oil, and Western sumac.", price:4, style: 'no-image', type: 'side'},
         {id:205,title:'Fries', desc: "Crisp and lightly seasoned.", price:4,style: 'no-image', type: 'side'},
 
-        {id:301,title:'Rose Lemonade', desc: "",price:1.5,style: 'no-image', type: 'beverage'},
+        {id:301,title:'Rose Lemonade', desc: "",price:1.5,img:rose, type: 'beverage'},
         {id:301,title:'Topo Chico', desc: "", price:1.5,style: 'no-image', type: 'beverage'},
         {id:301,title:'Coke', desc: "",price:1.5,style: 'no-image', type: 'beverage'},
         {id:301,title:'Sprite', desc: "", price:1.5, style: 'no-image', deal: false},
@@ -45,9 +50,9 @@ const initState = {
             {id:104,title:'Shish-Tawook', desc:'Marinated chicken, french fries, tomato, pickles, and garlic aioli.', price:8, style: 'no-image', type: 'entre'},
             {id:105,title:'Mixed Grill Plate', desc: "A generous portion of marinated steak kebab, chicken, kofta with grilled onion, and tomato. Served over pita.", price:17, img: mixedGrill, type: 'entre'},
             {id:106,title:'Kafta', desc: "Grilled seasoned ground beef, grilled onions, parsley, tomato, and hummus.",price:8, style: 'no-image', type: 'entre'},
-            {id:107,title:'Shawarma Fries', desc: "Crispy fries topped shwarma with tomato, pickle, onion, parsley, and tahini sauce.", price:9, style: 'no-image', type: 'entre'},
+            {id:107,title:'Shawarma Fries', desc: "Crispy fries topped shwarma with tomato, pickle, onion, parsley, and tahini sauce.", price:9, img: fries, type: 'entre'},
             {id:108,title:'Veggie Plate', desc: "Falafel, tabbouleh, hummus, baba ghanouj, and pita.", price:9,img:veggiePlate, type: 'entre'},
-            {id:109,title:'Falafel Pita Wrap', desc: "Fresh parsley, mint, tomato, pickle, and tahini sauce.", price:6, style: 'no-image', type: 'entre'},
+            {id:109,title:'Falafel Pita Wrap', desc: "Fresh parsley, mint, tomato, pickle, and tahini sauce.", price:6, img: falafel, type: 'entre'},
            
         ],
 
@@ -64,7 +69,7 @@ const initState = {
            
 
 
-        {id:301,title:'Rose Lemonade', desc: "",price:1.5,style: 'no-image', type: 'beverage'},
+        {id:301,title:'Rose Lemonade', desc: "",price:1.5,img: rose, type: 'beverage'},
         {id:301,title:'Topo Chico', desc: "", price:1.5,style: 'no-image', type: 'beverage'},
         {id:301,title:'Coke', desc: "",price:1.5,style: 'no-image', type: 'beverage'},
         {id:301,title:'Sprite', desc: "", price:1.5, style: 'no-image', deal: false},
@@ -78,7 +83,10 @@ const initState = {
         top: [
             {id:101,title:'Beef Shawarma', desc: 'Marinated beef, fresh parsley, tomato, onion, pickles, and tahini sauce.', price:8, img: beefShawarma , type: 'entre'},
             {id:102,title:'Chicken Shawarma', desc: 'Thinly sliced marinated chicken, French fries, pickles, and garlic aioli.', price:8, img: chickenShawarma, type: 'entre'},
-            {id:105,title:'Mixed Grill Plate', desc: "A generous portion of marinated steak kebab, chicken, kofta with grilled onion, and tomato. Served over pita.", price:17, img: mixedGrill, type: 'entre'}
+            {id:105,title:'Mixed Grill Plate', desc: "A generous portion of marinated steak kebab, chicken, kofta with grilled onion, and tomato. Served over pita.", price:17, img: mixedGrill, type: 'entre'},
+            {id:301,title:'Rose Lemonade', desc: "",price:1.5,img: rose, type: 'beverage'},
+            {id:107,title:'Shawarma Fries', desc: "Crispy fries topped shwarma with tomato, pickle, onion, parsley, and tahini sauce.", price:9, img: fries, type: 'entre'},
+            {id:108,title:'Veggie Plate', desc: "Falafel, tabbouleh, hummus, baba ghanouj, and pita.", price:9,img:veggiePlate, type: 'entre'},
         ],
 
     
@@ -86,7 +94,7 @@ const initState = {
     orderNumber: (Math.round(Math.random() * 10000) + 10000 ),
     addedItems:[],
     total: 0,
-    selectedLocation: "Select Location",
+    selectedLocation: "Beirut ATX: 11228 Domain Dr. Austin, TX 78758.",
     totalUnits: 0,
     isCartVisible: true,
 

@@ -47,7 +47,7 @@ class OrderDetails extends Component{
                                         defaultValue={values.email}
                                         />
                                     </Form.Field ><br />
-                                    <h5 className="ui centered">Order contact</h5>
+                                    <h5 className="ui centered">Contact Phone</h5>
                                     <Form.Field className="ui centered">
                                       
                                         <input
